@@ -41,9 +41,68 @@ namespace CyberAwarenessBot
             // Ask for user's name
             Console.Write("What’s your name? ");
             string name = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(name)) name = "Friend";
 
-            Console.WriteLine($"Hello, {name}! I'm here to help you stay safe online. 💻");
+            Console.WriteLine($"Hello, {name}! I'm here to help you stay safe online. 💻Ask me anything about cybersecurity. Type 'exit' to leave. ");
+            while (true)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("\nYou: ");
+                Console.ResetColor();
+
+                string input = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("⚠️ Please enter a valid question.");
+                    Console.ResetColor();
+                    continue;
+                }
+
+                if (input.ToLower() == "exit")
+                {
+                    Console.WriteLine("👋 Goodbye! Stay safe online!");
+                    break;
+                }
+
+                RespondToUser(input.ToLower());
+            }
         }
+        static void RespondToUser(string input)
+        {
+            switch (input)
+            {
+                case "how are you?":
+                    Console.WriteLine("🤖 I'm running securely and ready to help!");
+                    break;
+
+                case "what's your purpose?":
+                    Console.WriteLine("🛡️ I help South African citizens learn how to stay safe online.");
+                    break;
+
+                case "what can i ask you about?":
+                    Console.WriteLine("💡 You can ask about phishing, password safety, or safe browsing.");
+                    break;
+
+                case "phishing":
+                    Console.WriteLine("🎣 Phishing is when attackers trick you into giving info via fake messages.");
+                    break;
+
+                case "password safety":
+                    Console.WriteLine("🔐 Use long, unique passwords and change them often.");
+                    break;
+
+                case "safe browsing":
+                    Console.WriteLine("🌐 Avoid clicking unknown links, and only use trusted websites.");
+                    break;
+
+                default:
+                    Console.WriteLine("❓ I didn't quite understand that. Could you try rephrasing?");
+                    break;
+            }
+        }
+
 
     }
 }
