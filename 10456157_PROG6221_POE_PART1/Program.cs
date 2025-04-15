@@ -6,7 +6,7 @@ namespace CyberAwarenessChatBot
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("CyberAwarenessChatBot initialized.");
+            Console.WriteLine("CyberAwarenessChatBot initialized");
         }
     }
 }
