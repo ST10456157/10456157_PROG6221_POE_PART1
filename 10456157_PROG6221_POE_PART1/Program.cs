@@ -44,7 +44,7 @@ namespace CyberAwarenessBot
             if (string.IsNullOrWhiteSpace(name)) name = "Friend";
 
             Console.WriteLine($"Hello, {name}! I'm here to help you stay safe online. 💻Ask me anything about cybersecurity. Type 'exit' to leave. "); // responds to the user by stating their name and what the user must ask questions about or type to exit.
-            while (true) 
+            while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write("\nYou: ");
@@ -102,5 +102,7 @@ namespace CyberAwarenessBot
                     break;
             }
         }
+    }
+}
 
 
