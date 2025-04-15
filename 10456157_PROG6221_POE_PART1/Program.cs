@@ -36,7 +36,7 @@ namespace CyberAwarenessBot
  \___)(__/  (____/(____)(__\_)(____/(____)\___)\____/(__\_)(__) (__) (__/    \_/\_/(_/\_)\_/\_/(__\_)(____)\_)__)(____)(____/(____/  (____/ \__/ (__)
 ");
 
-            Console.WriteLine("Welcome to the Cybersecurity Awareness Bot! ");
+            Console.WriteLine("Welcome to the Cybersecurity Awareness Bot! 🔐");
 
             // Ask for user's name
             Console.Write("What’s your name? ");
